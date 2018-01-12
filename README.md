@@ -27,7 +27,7 @@ draw_chart("Titulo do Grafico", 'pie', 'canvas_id', arrayLabels, [
 
 * **Exemplo**: Gráfico de pizza com múltiplas séries
 ```javascript
-draw_chart("Titulo do Grafico", 'bar-horizontal-stacked', 'canvas_id', arrayLabels, [
+draw_chart("Titulo do Grafico", 'pie', 'canvas_id', arrayLabels, [
     {data: arrayDados[1], label: 'Label 1', color: ['dark', 'red']},
     {data: arrayDados[2], label: 'Label 2', color: ['dark', 'red']},
     {data: arrayDados[3], label: 'Label 3', color: ['dark', 'red']},
@@ -37,7 +37,7 @@ draw_chart("Titulo do Grafico", 'bar-horizontal-stacked', 'canvas_id', arrayLabe
 
 * **Exemplo**: Atualizando dados no gráfico em tempo de execução
 ```javascript
-var graf = draw_chart("Titulo do Grafico", 'bar-horizontal-stacked', 'canvas_id', arrayLabels, [
+var graf = draw_chart("Titulo do Grafico", 'doughnut', 'canvas_id', arrayLabels, [
     {data: arrayDados, label: 'Label', color: arrayColors}
 ]);
 
