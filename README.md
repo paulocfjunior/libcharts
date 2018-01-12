@@ -1,14 +1,31 @@
 # libcharts
 Biblioteca de funções para elaboração rápida e eficiente de gráficos usando Charts.js.
 
-* **Exemplo**: Gráfico de barras horizontal de colunas empilhadas com uma série
+## Gráficos Disponíveis
+* line
+* line-stacked
+* bar
+* bar-stacked
+* bar-stackedX
+* bar-stackedY
+* bar-horizontal
+* bar-horizontal-stacked
+* pie
+* doughnut
+* polar
+
+## Função Auxiliar de Criação de Array de Cores RGBA
+Função que retorna cor ou array de cores no formato RGBA utilizado no gráfico, com opacidade alterável. (Seleção não randômica).
+
+## Exemplos
+* **Gráfico de barras horizontal de colunas empilhadas com uma série**
 ```javascript
 draw_chart("Titulo do Grafico", 'bar-horizontal-stacked', 'canvas_id', arrayLabels, [
     {data: arrayDados, label: 'Label', color: arrayColors}
 ]);
 ```
 
-* **Exemplo**: Gráfico de barras horizontal de colunas empilhadas com múltiplas séries
+* **Gráfico de barras horizontal de colunas empilhadas com múltiplas séries**
 ```javascript
 draw_chart("Titulo do Grafico", 'bar-horizontal-stacked', 'canvas_id', arrayLabels, [
     {data: arrayDados[1], label: 'Label 1', color: ['dark', 'red']},
@@ -18,14 +35,14 @@ draw_chart("Titulo do Grafico", 'bar-horizontal-stacked', 'canvas_id', arrayLabe
 ]);
 ```
 
-* **Exemplo**: Gráfico de pizza com uma série
+* **Gráfico de pizza com uma série**
 ```javascript
 draw_chart("Titulo do Grafico", 'pie', 'canvas_id', arrayLabels, [
     {data: arrayDados, label: 'Label', color: arrayColors}
 ]);
 ```
 
-* **Exemplo**: Gráfico de pizza com múltiplas séries
+* **Gráfico de pizza com múltiplas séries**
 ```javascript
 draw_chart("Titulo do Grafico", 'pie', 'canvas_id', arrayLabels, [
     {data: arrayDados[1], label: 'Label 1', color: ['dark', 'red']},
@@ -35,7 +52,7 @@ draw_chart("Titulo do Grafico", 'pie', 'canvas_id', arrayLabels, [
 ]);
 ```
 
-* **Exemplo**: Atualizando dados no gráfico em tempo de execução
+* **Atualizando dados no gráfico em tempo de execução**
 ```javascript
 var graf = draw_chart("Titulo do Grafico", 'doughnut', 'canvas_id', arrayLabels, [
     {data: arrayDados, label: 'Label', color: arrayColors}
